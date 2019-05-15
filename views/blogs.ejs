@@ -1,0 +1,11 @@
+<!-- <h1>This is the blogs index page</h1> -->
+<% include partials/header %>
+
+<% for(var i=0;i < blogs.length;i++){ %>
+
+<% blogs[i].forEach(blog=>{ %>
+    <h3><%= blog.title %></h3>
+    <img src="<%= blog.image %>">
+    <p><%= blog.text %></p>
+<% }) %>
+<%} %>
