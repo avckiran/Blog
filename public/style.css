@@ -1,11 +1,11 @@
 body{
     margin : 0 auto;
 }
-img{
-    width:500px;
-    height:auto;
-}
 
 i.icon{
     font-size:1.3em;
+}
+
+.container.main{
+    margin-top: 7.0em;
 }

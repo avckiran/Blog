@@ -1,11 +1,32 @@
 <!-- <h1>This is the blogs index page</h1> -->
 <% include partials/header %>
-
-<% for(var i=0;i < blogs.length;i++){ %>
-
-<% blogs[i].forEach(blog=>{ %>
-    <h3><%= blog.title %></h3>
-    <img src="<%= blog.image %>">
-    <p><%= blog.text %></p>
-<% }) %>
-<%} %>
+<div class="ui main text container" style="padding-top:50px;">
+    <div class="ui two column very relaxed stackable grid">
+        <div class="column">
+            <h1>Welcome to your blog</h1>
+        </div>
+        <div class="column">
+            <h3><a href="/blogs/new">Create a New Blog</a></h3>
+        </div>
+    </div>
+    <div class="ui link cards center">
+        <% for(var i=0;i < blogs.length;i++){ %>
+        <% blogs[i].forEach(blog=>{ %>
+            <div class="card">
+                <div class="image">
+                    <img src="<%= blog.image %>" width=400 height=250>
+                </div>
+                <div class="content">
+                    <div class="header">
+                        <h3><%= blog.title %></h3>
+                    </div>
+                    <div class="description">
+                        <p><%= blog.text %></p>
+                        <a href="/body/<%= blog.id %>">Read More...</a>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+        <%} %>
+    </div>
+</div>

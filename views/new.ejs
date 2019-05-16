@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <h1 class="ui huge header">Create a new blog!</h1>
+    <form class="ui form" action="/blogs" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" placeholder="max 100 characters">
+        </div>
+        <div class="field">
+            <label for="">Image URL</label>
+            <input type="text" name="blog[image]" placeholder="http://">
+        </div>
+        <div class="field">
+            <label for="">Post</label>
+            <!-- <input type="text" name="blog[desc]" placeholder="Description"> -->
+            <textarea name="blog[desc]" id="" cols="30" rows="10"></textarea>
+        </div>
+        <button class="ui primary button">Submit</button>
+    </form>
+</div>
